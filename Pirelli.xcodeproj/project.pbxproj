@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD25C75A1FF4522900E0580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25C7591FF4522900E0580C /* AppDelegate.swift */; };
+		DD25C75C1FF4522900E0580C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25C75B1FF4522900E0580C /* ViewController.swift */; };
+		DD25C75F1FF4522900E0580C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD25C75D1FF4522900E0580C /* Main.storyboard */; };
+		DD25C7611FF4522900E0580C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD25C7601FF4522900E0580C /* Assets.xcassets */; };
+		DD25C7641FF4522900E0580C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD25C7621FF4522900E0580C /* LaunchScreen.storyboard */; };
+		DD25C76E1FF4567A00E0580C /* ufonts.com_gotham-book-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD25C76B1FF4567A00E0580C /* ufonts.com_gotham-book-italic.ttf */; };
+		DD25C76F1FF4567A00E0580C /* gotham-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD25C76C1FF4567A00E0580C /* gotham-bold-webfont.ttf */; };
+		DD25C7701FF4567A00E0580C /* gotham_book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD25C76D1FF4567A00E0580C /* gotham_book.ttf */; };
+		DD25C7731FF5A6D000E0580C /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DD25C7561FF4522900E0580C /* Pirelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pirelli.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD25C7591FF4522900E0580C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD25C75B1FF4522900E0580C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD25C75E1FF4522900E0580C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD25C7601FF4522900E0580C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD25C7631FF4522900E0580C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD25C7651FF4522900E0580C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD25C76B1FF4567A00E0580C /* ufonts.com_gotham-book-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_gotham-book-italic.ttf"; sourceTree = "<group>"; };
+		DD25C76C1FF4567A00E0580C /* gotham-bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gotham-bold-webfont.ttf"; sourceTree = "<group>"; };
+		DD25C76D1FF4567A00E0580C /* gotham_book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_book.ttf; sourceTree = "<group>"; };
+		DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD25C7531FF4522900E0580C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD25C74D1FF4522900E0580C = {
+			isa = PBXGroup;
+			children = (
+				DD25C7581FF4522900E0580C /* Pirelli */,
+				DD25C7571FF4522900E0580C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD25C7571FF4522900E0580C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD25C7561FF4522900E0580C /* Pirelli.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD25C7581FF4522900E0580C /* Pirelli */ = {
+			isa = PBXGroup;
+			children = (
+				DD25C7711FF4568900E0580C /* Resources */,
+				DD25C7591FF4522900E0580C /* AppDelegate.swift */,
+				DD25C75B1FF4522900E0580C /* ViewController.swift */,
+				DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */,
+				DD25C75D1FF4522900E0580C /* Main.storyboard */,
+				DD25C7601FF4522900E0580C /* Assets.xcassets */,
+				DD25C7621FF4522900E0580C /* LaunchScreen.storyboard */,
+				DD25C7651FF4522900E0580C /* Info.plist */,
+			);
+			path = Pirelli;
+			sourceTree = "<group>";
+		};
+		DD25C7711FF4568900E0580C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD25C76D1FF4567A00E0580C /* gotham_book.ttf */,
+				DD25C76C1FF4567A00E0580C /* gotham-bold-webfont.ttf */,
+				DD25C76B1FF4567A00E0580C /* ufonts.com_gotham-book-italic.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD25C7551FF4522900E0580C /* Pirelli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD25C7681FF4522900E0580C /* Build configuration list for PBXNativeTarget "Pirelli" */;
+			buildPhases = (
+				DD25C7521FF4522900E0580C /* Sources */,
+				DD25C7531FF4522900E0580C /* Frameworks */,
+				DD25C7541FF4522900E0580C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pirelli;
+			productName = Pirelli;
+			productReference = DD25C7561FF4522900E0580C /* Pirelli.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD25C74E1FF4522900E0580C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "The Hungry Gorilla";
+				TargetAttributes = {
+					DD25C7551FF4522900E0580C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DD25C7511FF4522900E0580C /* Build configuration list for PBXProject "Pirelli" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD25C74D1FF4522900E0580C;
+			productRefGroup = DD25C7571FF4522900E0580C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD25C7551FF4522900E0580C /* Pirelli */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD25C7541FF4522900E0580C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD25C7641FF4522900E0580C /* LaunchScreen.storyboard in Resources */,
+				DD25C76E1FF4567A00E0580C /* ufonts.com_gotham-book-italic.ttf in Resources */,
+				DD25C7611FF4522900E0580C /* Assets.xcassets in Resources */,
+				DD25C7701FF4567A00E0580C /* gotham_book.ttf in Resources */,
+				DD25C76F1FF4567A00E0580C /* gotham-bold-webfont.ttf in Resources */,
+				DD25C75F1FF4522900E0580C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD25C7521FF4522900E0580C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD25C75C1FF4522900E0580C /* ViewController.swift in Sources */,
+				DD25C75A1FF4522900E0580C /* AppDelegate.swift in Sources */,
+				DD25C7731FF5A6D000E0580C /* PerformanceViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DD25C75D1FF4522900E0580C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD25C75E1FF4522900E0580C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD25C7621FF4522900E0580C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD25C7631FF4522900E0580C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD25C7661FF4522900E0580C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD25C7671FF4522900E0580C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD25C7691FF4522900E0580C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H92R5P84FH;
+				INFOPLIST_FILE = Pirelli/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TheHungryGorilla.Pirelli;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD25C76A1FF4522900E0580C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H92R5P84FH;
+				INFOPLIST_FILE = Pirelli/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TheHungryGorilla.Pirelli;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD25C7511FF4522900E0580C /* Build configuration list for PBXProject "Pirelli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD25C7661FF4522900E0580C /* Debug */,
+				DD25C7671FF4522900E0580C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD25C7681FF4522900E0580C /* Build configuration list for PBXNativeTarget "Pirelli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD25C7691FF4522900E0580C /* Debug */,
+				DD25C76A1FF4522900E0580C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD25C74E1FF4522900E0580C /* Project object */;
+}
