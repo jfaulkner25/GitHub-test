@@ -9,6 +9,12 @@
 import UIKit
 
 class ProductionTableViewCell: UITableViewCell {
+    
+    // UI Elements
+    @IBOutlet weak var machineLabel: UILabel!
+    @IBOutlet weak var stopCountLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var oeeLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

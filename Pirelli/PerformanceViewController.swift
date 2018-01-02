@@ -26,7 +26,11 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var longLabel: UILabel!
     
     // TableView Data Source
-    var machines = ["Fischer", "CMP", "TreadLine", "Sidewall Line"]
+    var machines = ["Fischer", "CMP", "BY1", "ABC"]
+    var currentStoppageCount = [106, 65, 30, 12]
+    var totalStoppageCount = [156, 90, 98, 76]
+    var status = ["Stopped", "Stopped", "Stopped", "Avaliable"]
+    var oeeValue = [63.3, 54.6, 52.4, 96.3]
     
     // Runtime
     override func viewDidLoad() {
@@ -48,8 +52,18 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = machines[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductionTableViewCell
+        cell.machineLabel.text = machines[indexPath.row]
+        cell.stopCountLabel.text = "\(currentStoppageCount[indexPath.row])mins/ \(totalStoppageCount[indexPath.row])mins"
+        cell.statusLabel.text = status[indexPath.row]
+        cell.oeeLabel.text = "\(oeeValue[indexPath.row])%"
+        
+        if oeeValue[indexPath.row] > 70.0 {
+            cell.oeeLabel.textColor = UIColor.green
+        } else {
+            cell.oeeLabel.textColor = UIColor.red
+        }
+
         return cell
     }
     
