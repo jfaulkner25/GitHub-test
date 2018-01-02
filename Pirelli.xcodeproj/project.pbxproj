@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD0A9CC51FFC31D700E63381 /* ProductionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A9CC41FFC31D700E63381 /* ProductionTableViewCell.swift */; };
 		DD25C75A1FF4522900E0580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25C7591FF4522900E0580C /* AppDelegate.swift */; };
 		DD25C75C1FF4522900E0580C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25C75B1FF4522900E0580C /* ViewController.swift */; };
 		DD25C75F1FF4522900E0580C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD25C75D1FF4522900E0580C /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD0A9CC41FFC31D700E63381 /* ProductionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionTableViewCell.swift; sourceTree = "<group>"; };
 		DD25C7561FF4522900E0580C /* Pirelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pirelli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD25C7591FF4522900E0580C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD25C75B1FF4522900E0580C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				DD25C7591FF4522900E0580C /* AppDelegate.swift */,
 				DD25C75B1FF4522900E0580C /* ViewController.swift */,
 				DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */,
+				DD0A9CC41FFC31D700E63381 /* ProductionTableViewCell.swift */,
 				DD25C75D1FF4522900E0580C /* Main.storyboard */,
 				DD25C7601FF4522900E0580C /* Assets.xcassets */,
 				DD25C7621FF4522900E0580C /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 			files = (
 				DD25C75C1FF4522900E0580C /* ViewController.swift in Sources */,
 				DD25C75A1FF4522900E0580C /* AppDelegate.swift in Sources */,
+				DD0A9CC51FFC31D700E63381 /* ProductionTableViewCell.swift in Sources */,
 				DD25C7731FF5A6D000E0580C /* PerformanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92R5P84FH;
 				INFOPLIST_FILE = Pirelli/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TheHungryGorilla.Pirelli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -316,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92R5P84FH;
 				INFOPLIST_FILE = Pirelli/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TheHungryGorilla.Pirelli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
