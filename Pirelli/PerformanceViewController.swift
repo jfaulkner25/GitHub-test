@@ -42,7 +42,8 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         shortLabel.text = String(shortLostTime)
         medLabel.text = String(medLostTime)
         longLabel.text = String(longLostTime)
-
+        
+        startTimer()
     }
     
     
@@ -66,8 +67,34 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
 
         return cell
     }
-    
-    
-    
 
+    // MARK: Random Number Generator
+    @objc func randomArray() {
+        var resultOEE: [Double] = []
+        var resultCurrentStoppage: [Int] = []
+        var resultTotalStoppage: [Int] = []
+        
+        for _ in 0...4 {
+            resultOEE.append(Double(arc4random_uniform(50)+50))
+            resultCurrentStoppage.append(Int(arc4random_uniform(75)+20))
+            resultTotalStoppage.append(Int(arc4random_uniform(100)+50))
+        }
+        oeeValue = resultOEE
+        currentStoppageCount = resultCurrentStoppage
+        totalStoppageCount = resultTotalStoppage
+        
+        print(oeeValue)
+        tableView.reloadData()
+    }
+    
+    func startTimer() {
+        _ = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(randomArray), userInfo: nil, repeats: true)
+    }
+
+    
+    
+    
+    
+    
+    
 }
