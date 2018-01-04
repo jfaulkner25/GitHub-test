@@ -219,12 +219,18 @@
                                     <navigationItem title="MF2" id="OKO-1e-rDW"/>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPQ-cn-FKO" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="101" width="375" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="l9e-kK-of0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Performance" image="dashboard" id="Snn-gH-9VR"/>
                     <connections>
+                        <outlet property="barChartView" destination="uPQ-cn-FKO" id="elz-fb-A05"/>
                         <outlet property="longLabel" destination="DyS-3C-iWM" id="Un0-oF-dRO"/>
                         <outlet property="medLabel" destination="W10-ZV-45l" id="jS6-Qm-53g"/>
                         <outlet property="shortLabel" destination="rIk-4e-R8F" id="SRX-z8-57Q"/>

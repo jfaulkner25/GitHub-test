@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class PerformanceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -18,6 +19,9 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
     var shortLostTime = 39
     var medLostTime = 140
     var longLostTime = 301
+    
+    // Chart View
+    @IBOutlet weak var barChartView: BarChartView!
     
     // UI Elements
     @IBOutlet weak var tableView: UITableView!
@@ -85,13 +89,30 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         
         print(oeeValue)
         tableView.reloadData()
+        
+        // Chart
+        setChart(dataPoints: machines, values: oeeValue)
     }
     
     func startTimer() {
         _ = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(randomArray), userInfo: nil, repeats: true)
     }
 
-    
+    // Charts - Run in ViewDidLoad()
+    func setChart(dataPoints: [String], values: [Double]) {
+        barChartView.noDataText = "No data found"
+        
+        var dataEntries: [BarChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            let dataEntry = BarChartDataEntry(x: Double(i), yValues: [values[i]])
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Units sold")
+        let chartData = BarChartData(dataSets: [chartDataSet])
+        barChartView.data = chartData
+    }
     
     
     
