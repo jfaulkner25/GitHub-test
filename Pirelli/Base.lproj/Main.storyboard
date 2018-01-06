@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="716" y="1418.1409295352325"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="fEN-09-Hba">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2Ji-0A-exd" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2Ji-0A-exd" customClass="TabBarViewController" customModule="Pirelli" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zhm-wj-R6w">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -252,6 +252,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="tabBar" destination="Zhm-wj-R6w" id="8ER-aV-MQv"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="I6m-b9-5we"/>
                         <segue destination="WNt-df-Yoe" kind="relationship" relationship="viewControllers" id="Tan-rp-kem"/>
                         <segue destination="p2K-xP-zSo" kind="relationship" relationship="viewControllers" id="tf0-Bc-8WK"/>

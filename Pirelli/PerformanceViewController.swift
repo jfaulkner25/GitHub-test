@@ -105,17 +105,31 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         var dataEntries: [BarChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(x: Double(i), yValues: [values[i]])
+            let dataEntry = BarChartDataEntry(x: Double(i)+1, yValues: [values[i]])
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Units sold")
-        let chartData = BarChartData(dataSets: [chartDataSet])
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Data")
+        let chartData = BarChartData(dataSet: chartDataSet)
         barChartView.data = chartData
+        
+        
+        // Chart Formatting
+        let x = barChartView.xAxis
+        x.labelPosition = .bottom
+        x.labelFont = .systemFont(ofSize: 10)
+        x.granularity = 1
+        x.labelCount = 4
+        x.drawGridLinesEnabled = false
+        
+        
+        barChartView.leftAxis.axisMaximum = 100
+        barChartView.leftAxis.axisMinimum = 0
+        
+        barChartView.legend.enabled = false
+        barChartView.chartDescription?.enabled = false
+        
+        barChartView.rightAxis.enabled = false
     }
-    
-    
-    
-    
     
 }
