@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class PerformanceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PerformanceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ChartViewDelegate{
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -21,7 +21,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
     var longLostTime = 301
     
     // Chart View
-    @IBOutlet weak var barChartView: BarChartView!
+    @IBOutlet weak var chartView: LineChartView!
     
     // UI Elements
     @IBOutlet weak var tableView: UITableView!
@@ -35,6 +35,10 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
     var totalStoppageCount = [156, 90, 98, 76]
     var status = ["Stopped", "Stopped", "Stopped", "Avaliable"]
     var oeeValue = [63.3, 54.6, 52.4, 96.3]
+    
+    // Dummy Data
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "August", "Sept", "Oct", "Nov", "Dec"]
+    let volume = [1453,2352,5431,1442,5451,6486,1173,5678,9234,1345,9411,2212]
     
     // Runtime
     override func viewDidLoad() {
@@ -91,45 +95,87 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.reloadData()
         
         // Chart
-        setChart(dataPoints: machines, values: oeeValue)
+        //setChart(dataPoints: machines, values: oeeValue)
+        updateGraph()
     }
     
     func startTimer() {
         _ = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(randomArray), userInfo: nil, repeats: true)
     }
 
-    // Charts - Run in ViewDidLoad()
-    func setChart(dataPoints: [String], values: [Double]) {
-        barChartView.noDataText = "No data found"
+    // Charts
+    func updateGraph() {
+        var lineChartEntry = [ChartDataEntry]()
         
-        var dataEntries: [BarChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(x: Double(i)+1, yValues: [values[i]])
-            dataEntries.append(dataEntry)
+        for i in 0..<volume.count {
+            let value = ChartDataEntry(x: Double(i), y: Double(volume[i]))
+            lineChartEntry.append(value)
         }
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Data")
-        let chartData = BarChartData(dataSet: chartDataSet)
-        barChartView.data = chartData
+        let line1 = LineChartDataSet(values: lineChartEntry, label: "")
+        line1.setColor(hexStringToUIColor(hex: "FED100"))
+        line1.setCircleColor(hexStringToUIColor(hex: "FED100"))
+        line1.drawCirclesEnabled = true
+        line1.lineWidth = 2.0
+        line1.circleRadius = 5.0
+        line1.drawCircleHoleEnabled = true
+        line1.mode = .cubicBezier
+        
+        let gradientColors = [ChartColorTemplates.colorFromString(pirelliClear).cgColor,
+                              ChartColorTemplates.colorFromString(pirelliYellow).cgColor]
+        let gradient = CGGradient(colorsSpace: nil, colors: gradientColors as CFArray, locations: nil)!
+        
+        line1.fillAlpha = 1
+        line1.fill = Fill(linearGradient: gradient, angle: 90) //.linearGradient(gradient, angle: 90)
+        line1.drawFilledEnabled = true
         
         
-        // Chart Formatting
-        let x = barChartView.xAxis
-        x.labelPosition = .bottom
-        x.labelFont = .systemFont(ofSize: 10)
-        x.granularity = 1
-        x.labelCount = 4
-        x.drawGridLinesEnabled = false
+        let leftAxis = chartView.leftAxis
+        leftAxis.drawGridLinesEnabled = false
+        leftAxis.enabled = false
         
         
-        barChartView.leftAxis.axisMaximum = 100
-        barChartView.leftAxis.axisMinimum = 0
+        let rightAxis = chartView.rightAxis
+        rightAxis.enabled = false
         
-        barChartView.legend.enabled = false
-        barChartView.chartDescription?.enabled = false
+        let xAxis = chartView.xAxis
+        xAxis.drawGridLinesEnabled = false
+        xAxis.enabled = false
         
-        barChartView.rightAxis.enabled = false
+        chartView.legend.enabled = false
+        
+        let data = LineChartData()
+        data.addDataSet(line1)
+        
+        chartView.data = data
+        chartView.chartDescription?.text = ""
+    }
+    
+    // Color
+    let pirelliYellow = "rgba(254, 209, 0, 1)"
+    let pirelliClear = "rgba(254, 209, 0, 0)"
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
 }
+
