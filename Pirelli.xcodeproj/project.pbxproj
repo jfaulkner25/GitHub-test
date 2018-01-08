@@ -20,6 +20,9 @@
 		DD25C7731FF5A6D000E0580C /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */; };
 		DDEF40B1200140E300F56C32 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEF40AE200140D000F56C32 /* Charts.framework */; };
 		DDEF40B2200140E300F56C32 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDEF40AE200140D000F56C32 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DDEF40BF20042A8C00F56C32 /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDEF40BE20042A8C00F56C32 /* Gotham-Light.otf */; };
+		DDEF40C120042AA100F56C32 /* GothamMedium_1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDEF40C020042AA000F56C32 /* GothamMedium_1.ttf */; };
+		DDEF40C320042ED600F56C32 /* TableDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF40C220042ED600F56C32 /* TableDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		DD25C76D1FF4567A00E0580C /* gotham_book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_book.ttf; sourceTree = "<group>"; };
 		DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
 		DDEF40A8200140CF00F56C32 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		DDEF40BE20042A8C00F56C32 /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
+		DDEF40C020042AA000F56C32 /* GothamMedium_1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamMedium_1.ttf; sourceTree = "<group>"; };
+		DDEF40C220042ED600F56C32 /* TableDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 				DD25C7601FF4522900E0580C /* Assets.xcassets */,
 				DD25C7621FF4522900E0580C /* LaunchScreen.storyboard */,
 				DD25C7651FF4522900E0580C /* Info.plist */,
+				DDEF40C220042ED600F56C32 /* TableDetailViewController.swift */,
 			);
 			path = Pirelli;
 			sourceTree = "<group>";
@@ -126,6 +133,8 @@
 		DD25C7711FF4568900E0580C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DDEF40C020042AA000F56C32 /* GothamMedium_1.ttf */,
+				DDEF40BE20042A8C00F56C32 /* Gotham-Light.otf */,
 				DD25C76D1FF4567A00E0580C /* gotham_book.ttf */,
 				DD25C76C1FF4567A00E0580C /* gotham-bold-webfont.ttf */,
 				DD25C76B1FF4567A00E0580C /* ufonts.com_gotham-book-italic.ttf */,
@@ -229,9 +238,11 @@
 				DD25C7641FF4522900E0580C /* LaunchScreen.storyboard in Resources */,
 				DD25C76E1FF4567A00E0580C /* ufonts.com_gotham-book-italic.ttf in Resources */,
 				DD25C7611FF4522900E0580C /* Assets.xcassets in Resources */,
+				DDEF40BF20042A8C00F56C32 /* Gotham-Light.otf in Resources */,
 				DD25C7701FF4567A00E0580C /* gotham_book.ttf in Resources */,
 				DD25C76F1FF4567A00E0580C /* gotham-bold-webfont.ttf in Resources */,
 				DD25C75F1FF4522900E0580C /* Main.storyboard in Resources */,
+				DDEF40C120042AA100F56C32 /* GothamMedium_1.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +255,7 @@
 			files = (
 				DD25C75C1FF4522900E0580C /* ViewController.swift in Sources */,
 				DD25C75A1FF4522900E0580C /* AppDelegate.swift in Sources */,
+				DDEF40C320042ED600F56C32 /* TableDetailViewController.swift in Sources */,
 				DD0A9CC51FFC31D700E63381 /* ProductionTableViewCell.swift in Sources */,
 				DD0A9D0820002A8E00E63381 /* TabBarViewController.swift in Sources */,
 				DD25C7731FF5A6D000E0580C /* PerformanceViewController.swift in Sources */,
@@ -391,7 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92R5P84FH;
 				INFOPLIST_FILE = Pirelli/Info.plist;
@@ -408,7 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92R5P84FH;
 				INFOPLIST_FILE = Pirelli/Info.plist;

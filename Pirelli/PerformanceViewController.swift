@@ -20,6 +20,8 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
     var medLostTime = 140
     var longLostTime = 301
     
+    var selectedFactory = "MF2"
+    
     // Chart View
     @IBOutlet weak var chartView: LineChartView!
     
@@ -30,11 +32,11 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var longLabel: UILabel!
     
     // TableView Data Source
-    var machines = ["Fischer", "CMP", "BY1", "ABC"]
-    var currentStoppageCount = [106, 65, 30, 12]
-    var totalStoppageCount = [156, 90, 98, 76]
-    var status = ["Stopped", "Stopped", "Stopped", "Avaliable"]
-    var oeeValue = [63.3, 54.6, 52.4, 96.3]
+    var machines = ["Fischer", "CMP", "BY1", "ABC", "VMI1", "VMI2"]
+    var currentStoppageCount = [106, 65, 30, 12, 23, 9]
+    var totalStoppageCount = [156, 90, 98, 76, 102, 13]
+    var status = ["Stopped", "Stopped", "Stopped", "Avaliable", "Breakdown", "Relax"]
+    var oeeValue = [63.3, 54.6, 52.4, 96.3, 79.3, 56.6]
     
     // Dummy Data
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "August", "Sept", "Oct", "Nov", "Dec"]
@@ -82,7 +84,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         var resultCurrentStoppage: [Int] = []
         var resultTotalStoppage: [Int] = []
         
-        for _ in 0...4 {
+        for _ in 0...machines.count {
             resultOEE.append(Double(arc4random_uniform(50)+50))
             resultCurrentStoppage.append(Int(arc4random_uniform(75)+20))
             resultTotalStoppage.append(Int(arc4random_uniform(100)+50))
@@ -95,7 +97,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.reloadData()
         
         // Chart
-        //setChart(dataPoints: machines, values: oeeValue)
+        view.sendSubview(toBack: chartView)
         updateGraph()
     }
     
@@ -103,7 +105,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         _ = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(randomArray), userInfo: nil, repeats: true)
     }
 
-    // Charts
+    // MARK: Charts
     func updateGraph() {
         var lineChartEntry = [ChartDataEntry]()
         
@@ -148,10 +150,12 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         data.addDataSet(line1)
         
         chartView.data = data
+        chartView.pinchZoomEnabled = false
+        chartView.doubleTapToZoomEnabled = false
         chartView.chartDescription?.text = ""
     }
     
-    // Color
+    // MARK: Color
     let pirelliYellow = "rgba(254, 209, 0, 1)"
     let pirelliClear = "rgba(254, 209, 0, 0)"
     
@@ -175,6 +179,58 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
             blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
             alpha: CGFloat(1.0)
         )
+    }
+    
+    // MARK: Dropdown Menu
+    @IBAction func handleSelection(_ sender: UIButton) {
+        dropItems.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations: {
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    
+    @IBOutlet var dropItems: [UIButton]!
+    
+    @IBAction func itemTapped(_ sender: UIButton) {
+        guard let title = sender.currentTitle, let factory = factoryName(rawValue: title) else {
+            return
+        }
+        
+        switch factory {
+        case .factory2:
+            print("2")
+            selectedFactory = "MF2"
+        case .factory3:
+            print("3")
+            selectedFactory = "MF3"
+        case .factory4:
+            print("4")
+            selectedFactory = "MF4"
+        case .factory5:
+            print("5")
+            selectedFactory = "MF5"
+        }
+    }
+    
+    enum factoryName: String {
+        case factory2 = "MF2"
+        case factory3 = "MF3"
+        case factory4 = "MF4"
+        case factory5 = "MF5"
+    }
+    
+    // MARK: Segue
+    let tableDetailSegueIdentifier = "ShowTableDetail"
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == tableDetailSegueIdentifier,
+            let destination = segue.destination as? TableDetailViewController,
+            let stoppageIndex = tableView.indexPathForSelectedRow?.row {
+                destination.factory = selectedFactory
+                destination.machine = machines[stoppageIndex]
+        }
     }
     
 }
