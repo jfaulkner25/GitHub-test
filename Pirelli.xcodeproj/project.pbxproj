@@ -115,17 +115,10 @@
 		DD25C7581FF4522900E0580C /* Pirelli */ = {
 			isa = PBXGroup;
 			children = (
+				DDEF40C62006B92D00F56C32 /* Others */,
+				DDEF40C52006B7D200F56C32 /* View */,
+				DDEF40C42006B7B200F56C32 /* Controllers */,
 				DD25C7711FF4568900E0580C /* Resources */,
-				DD25C7591FF4522900E0580C /* AppDelegate.swift */,
-				DD25C75B1FF4522900E0580C /* ViewController.swift */,
-				DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */,
-				DD0A9CC41FFC31D700E63381 /* ProductionTableViewCell.swift */,
-				DD0A9D0720002A8E00E63381 /* TabBarViewController.swift */,
-				DD25C75D1FF4522900E0580C /* Main.storyboard */,
-				DD25C7601FF4522900E0580C /* Assets.xcassets */,
-				DD25C7621FF4522900E0580C /* LaunchScreen.storyboard */,
-				DD25C7651FF4522900E0580C /* Info.plist */,
-				DDEF40C220042ED600F56C32 /* TableDetailViewController.swift */,
 			);
 			path = Pirelli;
 			sourceTree = "<group>";
@@ -149,6 +142,37 @@
 				DDEF40B0200140D000F56C32 /* ChartsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DDEF40C42006B7B200F56C32 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */,
+				DD0A9CC41FFC31D700E63381 /* ProductionTableViewCell.swift */,
+				DD0A9D0720002A8E00E63381 /* TabBarViewController.swift */,
+				DDEF40C220042ED600F56C32 /* TableDetailViewController.swift */,
+				DD25C75B1FF4522900E0580C /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DDEF40C52006B7D200F56C32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD25C75D1FF4522900E0580C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDEF40C62006B92D00F56C32 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				DD25C7591FF4522900E0580C /* AppDelegate.swift */,
+				DD25C7601FF4522900E0580C /* Assets.xcassets */,
+				DD25C7621FF4522900E0580C /* LaunchScreen.storyboard */,
+				DD25C7651FF4522900E0580C /* Info.plist */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,7 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92R5P84FH;
-				INFOPLIST_FILE = Pirelli/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Pirelli/Others/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TheHungryGorilla.Pirelli;
@@ -423,7 +447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92R5P84FH;
-				INFOPLIST_FILE = Pirelli/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Pirelli/Others/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TheHungryGorilla.Pirelli;
