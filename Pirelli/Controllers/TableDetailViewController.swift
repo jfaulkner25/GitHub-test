@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class TableDetailViewController: UIViewController {
+class TableDetailViewController: UIViewController, ChartViewDelegate {
 
     @IBOutlet weak var chartView: PieChartView!
     @IBOutlet weak var factoryLabel: UILabel!
@@ -24,6 +24,12 @@ class TableDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        chartView.delegate = self
+        
+        configureCharts(dataPassed: data)
+        
+//        view.layer.insertSublayer(gradient(frame: view.bounds), at:0)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +47,7 @@ class TableDetailViewController: UIViewController {
         navigationBar.layer.shadowOpacity = 0.25
         navigationBar.layer.shadowRadius = 2
         navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
-        navigationBar.topItem?.title = machine
+        navigationBar.topItem?.title = ("\(machine) Summary").uppercased()
         
         navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Gotham Book", size: 15)!]
         
@@ -75,6 +81,18 @@ class TableDetailViewController: UIViewController {
         )
     }
     
+    func gradient(frame:CGRect) -> CAGradientLayer {
+        let layer = CAGradientLayer()
+        layer.frame = frame
+        layer.startPoint = CGPoint(x: 0.5, y: 1)
+        layer.endPoint = CGPoint(x: 0.5, y: 0)
+        let color1 = hexStringToUIColor(hex: "#434343")
+        let color2 = hexStringToUIColor(hex: "#000000")
+        layer.colors = [
+            color1.cgColor,color2.cgColor]
+        return layer
+    }
+    
     // Pie Chart
     var data: [String:Float] = ["OEE":83.8, "Size Change":8.2, "Relax":2.3, "Breakdown": 4.7, "Meeting":1]
     
@@ -86,10 +104,35 @@ class TableDetailViewController: UIViewController {
         }
         return data
     }
-    
-    func configureCharts() {
-        let set = setData(dataSet: data)
+
+    func configureCharts(dataPassed: Dictionary<String, Float>) {
+        let entries:[PieChartDataEntry] = setData(dataSet: dataPassed)
+        let set = PieChartDataSet(values: entries, label: "Stoppages")
+
+        set.drawIconsEnabled = false
+        set.colors = ChartColorTemplates.vordiplom()
+        set.xValuePosition = .outsideSlice
+
+        let data = PieChartData(dataSet: set)
+
+        let pFormatter = NumberFormatter()
+        pFormatter.numberStyle = .percent
+        pFormatter.maximumFractionDigits = 1
+        pFormatter.multiplier = 1
+        pFormatter.percentSymbol = " %"
+        data.setValueFont(.systemFont(ofSize: 11, weight: .light))
+        data.setValueFormatter(DefaultValueFormatter(formatter: pFormatter))
+
+        data.setValueTextColor(NSUIColor(displayP3Red: 164, green: 165, blue: 171, alpha: 100))
         
+        chartView.centerText = "11-02-2017"
+        chartView.legend.enabled = false
+        chartView.chartDescription?.text = ""
+        chartView.animate(xAxisDuration: 1.4, yAxisDuration: 1.4)
+        chartView.data = data
+        chartView.highlightValues(nil)
     }
     
 }
+
+

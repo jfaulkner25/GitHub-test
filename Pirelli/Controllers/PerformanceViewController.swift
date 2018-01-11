@@ -54,6 +54,8 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         longLabel.text = String(longLostTime)
         
         startTimer()
+        
+        viewStyling()
     }
     
     
@@ -68,7 +70,8 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         cell.stopCountLabel.text = "\(currentStoppageCount[indexPath.row])mins/ \(totalStoppageCount[indexPath.row])mins"
         cell.statusLabel.text = status[indexPath.row]
         cell.oeeLabel.text = "\(oeeValue[indexPath.row])%"
-        
+        cell.layer.backgroundColor = UIColor.clear.cgColor
+
         if oeeValue[indexPath.row] > 70.0 {
             cell.oeeLabel.textColor = UIColor.green
         } else {
@@ -128,8 +131,9 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         let gradient = CGGradient(colorsSpace: nil, colors: gradientColors as CFArray, locations: nil)!
         
         line1.fillAlpha = 1
-        line1.fill = Fill(linearGradient: gradient, angle: 90) //.linearGradient(gradient, angle: 90)
+        line1.fill = Fill(linearGradient: gradient, angle: 90) 
         line1.drawFilledEnabled = true
+        line1.valueTextColor = NSUIColor(displayP3Red: 164, green: 165, blue: 171, alpha: 100)
         
         
         let leftAxis = chartView.leftAxis
@@ -156,6 +160,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     // MARK: Color
+    let backgroundColor = "#1E1F24"
     let pirelliYellow = "rgba(254, 209, 0, 1)"
     let pirelliClear = "rgba(254, 209, 0, 0)"
     
@@ -180,6 +185,11 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
             alpha: CGFloat(1.0)
         )
     }
+    
+    func viewStyling() {
+        tableView.backgroundColor = .clear
+    }
+    
     
     // MARK: Dropdown Menu
     @IBAction func handleSelection(_ sender: UIButton) {
