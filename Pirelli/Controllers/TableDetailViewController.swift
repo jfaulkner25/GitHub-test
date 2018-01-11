@@ -11,35 +11,39 @@ import Charts
 
 class TableDetailViewController: UIViewController, ChartViewDelegate {
 
+    // MARK: - UI Elements
     @IBOutlet weak var chartView: PieChartView!
     @IBOutlet weak var factoryLabel: UILabel!
     @IBOutlet weak var machineLabel: UILabel!
     @IBOutlet weak var navigationBar: UINavigationBar!
-    
     @IBAction func dismiss(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: - Global Variables
     var factory = String()
     var machine = String()
     
+    
+    // MARK: - Runtime
     override func viewDidLoad() {
         super.viewDidLoad()
         
         chartView.delegate = self
         
+        // Stlying
         configureCharts(dataPassed: data)
+        viewStyling()
         
-//        view.layer.insertSublayer(gradient(frame: view.bounds), at:0)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         factoryLabel.text = factory
         machineLabel.text = machine
-        
         configureNavigationBar()
     }
     
-    // Navigation Bar - Configuration
+    // MARK: - Navigation Bar
     func configureNavigationBar() {
         navigationBar.setValue(true, forKey: "hidesShadow") // Hides the line shadow
         let shadow = hexStringToUIColor(hex: "000000")
@@ -48,7 +52,6 @@ class TableDetailViewController: UIViewController, ChartViewDelegate {
         navigationBar.layer.shadowRadius = 2
         navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         navigationBar.topItem?.title = ("\(machine) Summary").uppercased()
-        
         navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Gotham Book", size: 15)!]
         
     }
@@ -57,8 +60,7 @@ class TableDetailViewController: UIViewController, ChartViewDelegate {
         return true
     }
     
-    // Color Code
-    
+    // MARK: - Color
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
@@ -93,7 +95,7 @@ class TableDetailViewController: UIViewController, ChartViewDelegate {
         return layer
     }
     
-    // Pie Chart
+    // MARK: - Pie Chart
     var data: [String:Float] = ["OEE":83.8, "Size Change":8.2, "Relax":2.3, "Breakdown": 4.7, "Meeting":1]
     
     func setData(dataSet: Dictionary<String, Float>) -> [PieChartDataEntry] {
@@ -108,9 +110,8 @@ class TableDetailViewController: UIViewController, ChartViewDelegate {
     func configureCharts(dataPassed: Dictionary<String, Float>) {
         let entries:[PieChartDataEntry] = setData(dataSet: dataPassed)
         let set = PieChartDataSet(values: entries, label: "Stoppages")
-
         set.drawIconsEnabled = false
-        set.colors = ChartColorTemplates.vordiplom()
+        set.colors = ChartColorTemplates.material()
         set.xValuePosition = .outsideSlice
 
         let data = PieChartData(dataSet: set)
@@ -122,7 +123,6 @@ class TableDetailViewController: UIViewController, ChartViewDelegate {
         pFormatter.percentSymbol = " %"
         data.setValueFont(.systemFont(ofSize: 11, weight: .light))
         data.setValueFormatter(DefaultValueFormatter(formatter: pFormatter))
-
         data.setValueTextColor(NSUIColor(displayP3Red: 164, green: 165, blue: 171, alpha: 100))
         
         chartView.centerText = "11-02-2017"
@@ -131,6 +131,25 @@ class TableDetailViewController: UIViewController, ChartViewDelegate {
         chartView.animate(xAxisDuration: 1.4, yAxisDuration: 1.4)
         chartView.data = data
         chartView.highlightValues(nil)
+    }
+    
+    // MARK: - Stlying
+    func viewStyling() {
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "bg-home-pad")
+        backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(blurEffectView)
+        self.view.insertSubview(blurEffectView, at: 1)
+        
+        self.view.bringSubview(toFront: chartView)
+        chartView.layer.zPosition = 10
     }
     
 }

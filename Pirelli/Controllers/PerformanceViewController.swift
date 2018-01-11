@@ -40,7 +40,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
     
     // Dummy Data
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "August", "Sept", "Oct", "Nov", "Dec"]
-    let volume = [1453,2352,5431,1442,5451,6486,1173,5678,9234,1345,9411,2212]
+    let volume = [9566, 9311, 9674, 9676, 10345, 9875, 8657, 9123, 9345, 9477, 9677, 9511, 9611]
     
     // Runtime
     override func viewDidLoad() {
@@ -186,8 +186,24 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         )
     }
     
+    // MARK: Stlying
     func viewStyling() {
         tableView.backgroundColor = .clear
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "bg-home-pad")
+        backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(blurEffectView)
+        self.view.insertSubview(blurEffectView, at: 1)
+        
+        self.view.bringSubview(toFront: chartView)
+        chartView.layer.zPosition = 10
     }
     
     
