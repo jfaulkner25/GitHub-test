@@ -30,6 +30,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var shortLabel: UILabel!
     @IBOutlet weak var medLabel: UILabel!
     @IBOutlet weak var longLabel: UILabel!
+    @IBOutlet weak var navigationBar: UINavigationBar!
     
     // TableView Data Source
     var machines = ["Fischer", "CMP", "BY1", "ABC", "VMI1", "VMI2"]
@@ -56,6 +57,7 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         startTimer()
         
         viewStyling()
+        configureNavigationBar()
     }
     
     
@@ -206,46 +208,63 @@ class PerformanceViewController: UIViewController, UITableViewDelegate, UITableV
         chartView.layer.zPosition = 10
     }
     
-    
-    // MARK: Dropdown Menu
-    @IBAction func handleSelection(_ sender: UIButton) {
-        dropItems.forEach { (button) in
-            UIView.animate(withDuration: 0.3, animations: {
-                button.isHidden = !button.isHidden
-                self.view.layoutIfNeeded()
-            })
-        }
-    }
-    
-    @IBOutlet var dropItems: [UIButton]!
-    
-    @IBAction func itemTapped(_ sender: UIButton) {
-        guard let title = sender.currentTitle, let factory = factoryName(rawValue: title) else {
-            return
-        }
+    // MARK: - Navigation Bar
+    func configureNavigationBar() {
+        navigationBar.setValue(true, forKey: "hidesShadow") // Hides the line shadow
+        let shadow = hexStringToUIColor(hex: "000000")
+        navigationBar.layer.shadowColor = shadow.cgColor
+        navigationBar.layer.shadowOpacity = 0.25
+        navigationBar.layer.shadowRadius = 2
+        navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        navigationBar.topItem?.title = "PIRELLI UK"
+        navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Gotham Book", size: 15)!]
         
-        switch factory {
-        case .factory2:
-            print("2")
-            selectedFactory = "MF2"
-        case .factory3:
-            print("3")
-            selectedFactory = "MF3"
-        case .factory4:
-            print("4")
-            selectedFactory = "MF4"
-        case .factory5:
-            print("5")
-            selectedFactory = "MF5"
-        }
+        let navItem = UINavigationItem(title: "PIRELLI UK")
+        let doneItem = UIBarButtonItem(image: UIImage(named: "setting"), style: .plain, target: nil, action: "selector")
+        navItem.rightBarButtonItem = doneItem
+        navigationBar.setItems([navItem], animated: false);
     }
+
     
-    enum factoryName: String {
-        case factory2 = "MF2"
-        case factory3 = "MF3"
-        case factory4 = "MF4"
-        case factory5 = "MF5"
-    }
+//    // MARK: Dropdown Menu
+//    @IBAction func handleSelection(_ sender: UIButton) {
+//        dropItems.forEach { (button) in
+//            UIView.animate(withDuration: 0.3, animations: {
+//                button.isHidden = !button.isHidden
+//                self.view.layoutIfNeeded()
+//            })
+//        }
+//    }
+//    
+//    @IBOutlet var dropItems: [UIButton]!
+//    
+//    @IBAction func itemTapped(_ sender: UIButton) {
+//        guard let title = sender.currentTitle, let factory = factoryName(rawValue: title) else {
+//            return
+//        }
+//        
+//        switch factory {
+//        case .factory2:
+//            print("2")
+//            selectedFactory = "MF2"
+//        case .factory3:
+//            print("3")
+//            selectedFactory = "MF3"
+//        case .factory4:
+//            print("4")
+//            selectedFactory = "MF4"
+//        case .factory5:
+//            print("5")
+//            selectedFactory = "MF5"
+//        }
+//    }
+//    
+//    enum factoryName: String {
+//        case factory2 = "MF2"
+//        case factory3 = "MF3"
+//        case factory4 = "MF4"
+//        case factory5 = "MF5"
+//    }
     
     // MARK: Segue
     let tableDetailSegueIdentifier = "ShowTableDetail"

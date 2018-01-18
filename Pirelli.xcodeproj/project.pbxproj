@@ -10,7 +10,6 @@
 		DD0A9CC51FFC31D700E63381 /* ProductionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A9CC41FFC31D700E63381 /* ProductionTableViewCell.swift */; };
 		DD0A9D0820002A8E00E63381 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A9D0720002A8E00E63381 /* TabBarViewController.swift */; };
 		DD25C75A1FF4522900E0580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25C7591FF4522900E0580C /* AppDelegate.swift */; };
-		DD25C75C1FF4522900E0580C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25C75B1FF4522900E0580C /* ViewController.swift */; };
 		DD25C75F1FF4522900E0580C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD25C75D1FF4522900E0580C /* Main.storyboard */; };
 		DD25C7611FF4522900E0580C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD25C7601FF4522900E0580C /* Assets.xcassets */; };
 		DD25C7641FF4522900E0580C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD25C7621FF4522900E0580C /* LaunchScreen.storyboard */; };
@@ -18,6 +17,10 @@
 		DD25C76F1FF4567A00E0580C /* gotham-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD25C76C1FF4567A00E0580C /* gotham-bold-webfont.ttf */; };
 		DD25C7701FF4567A00E0580C /* gotham_book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD25C76D1FF4567A00E0580C /* gotham_book.ttf */; };
 		DD25C7731FF5A6D000E0580C /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */; };
+		DD8B4A7320082C2E00F00929 /* PMSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B4A7220082C2E00F00929 /* PMSViewController.swift */; };
+		DD8B4A7620096DD500F00929 /* ImprovementsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B4A7520096DD500F00929 /* ImprovementsListViewController.swift */; };
+		DD8B4A7920096F2900F00929 /* CIAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B4A7820096F2900F00929 /* CIAction.swift */; };
+		DD8B4A7B200975BA00F00929 /* ImprovementListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B4A7A200975BA00F00929 /* ImprovementListTableViewCell.swift */; };
 		DDEF40B1200140E300F56C32 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEF40AE200140D000F56C32 /* Charts.framework */; };
 		DDEF40B2200140E300F56C32 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDEF40AE200140D000F56C32 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DDEF40BF20042A8C00F56C32 /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDEF40BE20042A8C00F56C32 /* Gotham-Light.otf */; };
@@ -68,7 +71,6 @@
 		DD0A9D0720002A8E00E63381 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DD25C7561FF4522900E0580C /* Pirelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pirelli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD25C7591FF4522900E0580C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD25C75B1FF4522900E0580C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD25C75E1FF4522900E0580C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD25C7601FF4522900E0580C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD25C7631FF4522900E0580C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,10 @@
 		DD25C76C1FF4567A00E0580C /* gotham-bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gotham-bold-webfont.ttf"; sourceTree = "<group>"; };
 		DD25C76D1FF4567A00E0580C /* gotham_book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_book.ttf; sourceTree = "<group>"; };
 		DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
+		DD8B4A7220082C2E00F00929 /* PMSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMSViewController.swift; sourceTree = "<group>"; };
+		DD8B4A7520096DD500F00929 /* ImprovementsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovementsListViewController.swift; sourceTree = "<group>"; };
+		DD8B4A7820096F2900F00929 /* CIAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIAction.swift; sourceTree = "<group>"; };
+		DD8B4A7A200975BA00F00929 /* ImprovementListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovementListTableViewCell.swift; sourceTree = "<group>"; };
 		DDEF40A8200140CF00F56C32 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		DDEF40BE20042A8C00F56C32 /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
 		DDEF40C020042AA000F56C32 /* GothamMedium_1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamMedium_1.ttf; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 		DD25C7581FF4522900E0580C /* Pirelli */ = {
 			isa = PBXGroup;
 			children = (
+				DD8B4A7720096EED00F00929 /* Model */,
 				DDEF40C62006B92D00F56C32 /* Others */,
 				DDEF40C52006B7D200F56C32 /* View */,
 				DDEF40C42006B7B200F56C32 /* Controllers */,
@@ -135,6 +142,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		DD8B4A7720096EED00F00929 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD8B4A7820096F2900F00929 /* CIAction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DDEF40A9200140CF00F56C32 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,9 +164,11 @@
 			children = (
 				DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */,
 				DD0A9CC41FFC31D700E63381 /* ProductionTableViewCell.swift */,
+				DD8B4A7220082C2E00F00929 /* PMSViewController.swift */,
 				DD0A9D0720002A8E00E63381 /* TabBarViewController.swift */,
 				DDEF40C220042ED600F56C32 /* TableDetailViewController.swift */,
-				DD25C75B1FF4522900E0580C /* ViewController.swift */,
+				DD8B4A7520096DD500F00929 /* ImprovementsListViewController.swift */,
+				DD8B4A7A200975BA00F00929 /* ImprovementListTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -277,12 +294,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD25C75C1FF4522900E0580C /* ViewController.swift in Sources */,
 				DD25C75A1FF4522900E0580C /* AppDelegate.swift in Sources */,
+				DD8B4A7320082C2E00F00929 /* PMSViewController.swift in Sources */,
+				DD8B4A7620096DD500F00929 /* ImprovementsListViewController.swift in Sources */,
 				DDEF40C320042ED600F56C32 /* TableDetailViewController.swift in Sources */,
+				DD8B4A7B200975BA00F00929 /* ImprovementListTableViewCell.swift in Sources */,
 				DD0A9CC51FFC31D700E63381 /* ProductionTableViewCell.swift in Sources */,
 				DD0A9D0820002A8E00E63381 /* TabBarViewController.swift in Sources */,
 				DD25C7731FF5A6D000E0580C /* PerformanceViewController.swift in Sources */,
+				DD8B4A7920096F2900F00929 /* CIAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

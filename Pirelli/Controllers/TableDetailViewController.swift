@@ -53,7 +53,6 @@ class TableDetailViewController: UIViewController, ChartViewDelegate {
         navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         navigationBar.topItem?.title = ("\(machine) Summary").uppercased()
         navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Gotham Book", size: 15)!]
-        
     }
     
     override var prefersStatusBarHidden: Bool {
