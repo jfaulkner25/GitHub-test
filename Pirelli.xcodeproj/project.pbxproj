@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1485E5F13DCFACCE68B798C7 /* Pods_Pirelli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B094F0767A2AE4161B64D30 /* Pods_Pirelli.framework */; };
 		DD0A9CC51FFC31D700E63381 /* ProductionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A9CC41FFC31D700E63381 /* ProductionTableViewCell.swift */; };
 		DD0A9D0820002A8E00E63381 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A9D0720002A8E00E63381 /* TabBarViewController.swift */; };
 		DD25C75A1FF4522900E0580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25C7591FF4522900E0580C /* AppDelegate.swift */; };
@@ -17,10 +18,13 @@
 		DD25C76F1FF4567A00E0580C /* gotham-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD25C76C1FF4567A00E0580C /* gotham-bold-webfont.ttf */; };
 		DD25C7701FF4567A00E0580C /* gotham_book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD25C76D1FF4567A00E0580C /* gotham_book.ttf */; };
 		DD25C7731FF5A6D000E0580C /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */; };
+		DD43FA8D20140C8D00B332C3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43FA8C20140C8D00B332C3 /* RegisterViewController.swift */; };
 		DD8B4A7320082C2E00F00929 /* PMSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B4A7220082C2E00F00929 /* PMSViewController.swift */; };
 		DD8B4A7620096DD500F00929 /* ImprovementsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B4A7520096DD500F00929 /* ImprovementsListViewController.swift */; };
 		DD8B4A7920096F2900F00929 /* CIAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B4A7820096F2900F00929 /* CIAction.swift */; };
 		DD8B4A7B200975BA00F00929 /* ImprovementListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B4A7A200975BA00F00929 /* ImprovementListTableViewCell.swift */; };
+		DD8B4A7F2012B5E800F00929 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD8B4A7E2012B5E800F00929 /* GoogleService-Info.plist */; };
+		DDD269FD2017F42500782366 /* AddImprovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD269FC2017F42500782366 /* AddImprovementViewController.swift */; };
 		DDEF40B1200140E300F56C32 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEF40AE200140D000F56C32 /* Charts.framework */; };
 		DDEF40B2200140E300F56C32 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDEF40AE200140D000F56C32 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DDEF40BF20042A8C00F56C32 /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDEF40BE20042A8C00F56C32 /* Gotham-Light.otf */; };
@@ -67,6 +71,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B094F0767A2AE4161B64D30 /* Pods_Pirelli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pirelli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83623EF8AFFD3AB2612F36ED /* Pods-Pirelli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pirelli.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pirelli/Pods-Pirelli.debug.xcconfig"; sourceTree = "<group>"; };
+		D88AC42D77E7C5D412D6A628 /* Pods-Pirelli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pirelli.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pirelli/Pods-Pirelli.release.xcconfig"; sourceTree = "<group>"; };
 		DD0A9CC41FFC31D700E63381 /* ProductionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionTableViewCell.swift; sourceTree = "<group>"; };
 		DD0A9D0720002A8E00E63381 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DD25C7561FF4522900E0580C /* Pirelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pirelli.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,10 +86,13 @@
 		DD25C76C1FF4567A00E0580C /* gotham-bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gotham-bold-webfont.ttf"; sourceTree = "<group>"; };
 		DD25C76D1FF4567A00E0580C /* gotham_book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_book.ttf; sourceTree = "<group>"; };
 		DD25C7721FF5A6D000E0580C /* PerformanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
+		DD43FA8C20140C8D00B332C3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DD8B4A7220082C2E00F00929 /* PMSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMSViewController.swift; sourceTree = "<group>"; };
 		DD8B4A7520096DD500F00929 /* ImprovementsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovementsListViewController.swift; sourceTree = "<group>"; };
 		DD8B4A7820096F2900F00929 /* CIAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIAction.swift; sourceTree = "<group>"; };
 		DD8B4A7A200975BA00F00929 /* ImprovementListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovementListTableViewCell.swift; sourceTree = "<group>"; };
+		DD8B4A7E2012B5E800F00929 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DDD269FC2017F42500782366 /* AddImprovementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImprovementViewController.swift; sourceTree = "<group>"; };
 		DDEF40A8200140CF00F56C32 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		DDEF40BE20042A8C00F56C32 /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
 		DDEF40C020042AA000F56C32 /* GothamMedium_1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamMedium_1.ttf; sourceTree = "<group>"; };
@@ -95,18 +105,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDEF40B1200140E300F56C32 /* Charts.framework in Frameworks */,
+				1485E5F13DCFACCE68B798C7 /* Pods_Pirelli.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C17E5CCCF1BB639B65AB0FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B094F0767A2AE4161B64D30 /* Pods_Pirelli.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B49E8481EA7A89CF64A4BA8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83623EF8AFFD3AB2612F36ED /* Pods-Pirelli.debug.xcconfig */,
+				D88AC42D77E7C5D412D6A628 /* Pods-Pirelli.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DD25C74D1FF4522900E0580C = {
 			isa = PBXGroup;
 			children = (
 				DD25C7581FF4522900E0580C /* Pirelli */,
 				DD25C7571FF4522900E0580C /* Products */,
 				DDEF40A8200140CF00F56C32 /* Charts.xcodeproj */,
+				B49E8481EA7A89CF64A4BA8D /* Pods */,
+				4C17E5CCCF1BB639B65AB0FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +199,8 @@
 				DDEF40C220042ED600F56C32 /* TableDetailViewController.swift */,
 				DD8B4A7520096DD500F00929 /* ImprovementsListViewController.swift */,
 				DD8B4A7A200975BA00F00929 /* ImprovementListTableViewCell.swift */,
+				DD43FA8C20140C8D00B332C3 /* RegisterViewController.swift */,
+				DDD269FC2017F42500782366 /* AddImprovementViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +216,7 @@
 		DDEF40C62006B92D00F56C32 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				DD8B4A7E2012B5E800F00929 /* GoogleService-Info.plist */,
 				DD25C7591FF4522900E0580C /* AppDelegate.swift */,
 				DD25C7601FF4522900E0580C /* Assets.xcassets */,
 				DD25C7621FF4522900E0580C /* LaunchScreen.storyboard */,
@@ -199,10 +232,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD25C7681FF4522900E0580C /* Build configuration list for PBXNativeTarget "Pirelli" */;
 			buildPhases = (
+				13D3A9B26094A5958449CCA3 /* [CP] Check Pods Manifest.lock */,
 				DD25C7521FF4522900E0580C /* Sources */,
 				DD25C7531FF4522900E0580C /* Frameworks */,
 				DD25C7541FF4522900E0580C /* Resources */,
 				DDEF40B5200140E300F56C32 /* Embed Frameworks */,
+				D552B3CE540C49F58790BB81 /* [CP] Embed Pods Frameworks */,
+				18D8FE4A3E1FAC6B8512A5B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,6 +314,7 @@
 			files = (
 				DD25C7641FF4522900E0580C /* LaunchScreen.storyboard in Resources */,
 				DD25C76E1FF4567A00E0580C /* ufonts.com_gotham-book-italic.ttf in Resources */,
+				DD8B4A7F2012B5E800F00929 /* GoogleService-Info.plist in Resources */,
 				DD25C7611FF4522900E0580C /* Assets.xcassets in Resources */,
 				DDEF40BF20042A8C00F56C32 /* Gotham-Light.otf in Resources */,
 				DD25C7701FF4567A00E0580C /* gotham_book.ttf in Resources */,
@@ -289,12 +326,112 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13D3A9B26094A5958449CCA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pirelli-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18D8FE4A3E1FAC6B8512A5B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pirelli/Pods-Pirelli-resources.sh",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/FUIAuthPickerViewController.nib",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/FUIAuthTableViewCell.nib",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/FUIEmailEntryViewController.nib",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/FUIPasswordRecoveryViewController.nib",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/FUIPasswordSignInViewController.nib",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/FUIPasswordSignUpViewController.nib",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/FUIPasswordVerificationViewController.nib",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/ic_email.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/ic_email@2x.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/ic_email@3x.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/ic_visibility.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/ic_visibility@2x.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/ic_visibility@3x.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/ic_visibility_off.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/ic_visibility_off@2x.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/ic_visibility_off@3x.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/en.lproj",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseFacebookAuthUI/Frameworks/FirebaseFacebookAuthUI.framework/ic_facebook.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseFacebookAuthUI/Frameworks/FirebaseFacebookAuthUI.framework/ic_facebook@2x.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseFacebookAuthUI/Frameworks/FirebaseFacebookAuthUI.framework/ic_facebook@3x.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseFacebookAuthUI/Frameworks/FirebaseFacebookAuthUI.framework/en.lproj",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseGoogleAuthUI/Frameworks/FirebaseGoogleAuthUI.framework/ic_google.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseGoogleAuthUI/Frameworks/FirebaseGoogleAuthUI.framework/ic_google@2x.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseGoogleAuthUI/Frameworks/FirebaseGoogleAuthUI.framework/ic_google@3x.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseGoogleAuthUI/Frameworks/FirebaseGoogleAuthUI.framework/en.lproj",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseTwitterAuthUI/Frameworks/FirebaseTwitterAuthUI.framework/ic_twitter.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseTwitterAuthUI/Frameworks/FirebaseTwitterAuthUI.framework/ic_twitter@2x.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseTwitterAuthUI/Frameworks/FirebaseTwitterAuthUI.framework/ic_twitter@3x.png",
+				"${PODS_ROOT}/FirebaseUI/FirebaseUIFrameworks/FirebaseTwitterAuthUI/Frameworks/FirebaseTwitterAuthUI.framework/en.lproj",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pirelli/Pods-Pirelli-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D552B3CE540C49F58790BB81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pirelli/Pods-Pirelli-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pirelli/Pods-Pirelli-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD25C7521FF4522900E0580C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DD25C75A1FF4522900E0580C /* AppDelegate.swift in Sources */,
+				DD43FA8D20140C8D00B332C3 /* RegisterViewController.swift in Sources */,
 				DD8B4A7320082C2E00F00929 /* PMSViewController.swift in Sources */,
 				DD8B4A7620096DD500F00929 /* ImprovementsListViewController.swift in Sources */,
 				DDEF40C320042ED600F56C32 /* TableDetailViewController.swift in Sources */,
@@ -303,6 +440,7 @@
 				DD0A9D0820002A8E00E63381 /* TabBarViewController.swift in Sources */,
 				DD25C7731FF5A6D000E0580C /* PerformanceViewController.swift in Sources */,
 				DD8B4A7920096F2900F00929 /* CIAction.swift in Sources */,
+				DDD269FD2017F42500782366 /* AddImprovementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +583,7 @@
 		};
 		DD25C7691FF4522900E0580C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83623EF8AFFD3AB2612F36ED /* Pods-Pirelli.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
@@ -462,6 +601,7 @@
 		};
 		DD25C76A1FF4522900E0580C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D88AC42D77E7C5D412D6A628 /* Pods-Pirelli.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";

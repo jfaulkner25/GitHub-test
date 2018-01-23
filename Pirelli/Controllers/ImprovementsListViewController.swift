@@ -76,10 +76,15 @@ class ImprovementsListViewController: UIViewController, UITableViewDelegate, UIT
         navigationBar.topItem?.title = "CI IMPROVEMENTS"
         navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Gotham Book", size: 15)!]
         
-        let addItem = UIBarButtonItem(image: UIImage(named: "plus"), style: .plain, target: nil, action: "#selector")
+        let addItem = UIBarButtonItem(image: UIImage(named: "plus"), style: .plain, target: nil, action: #selector(AddImprovementView))
         let navItem = UINavigationItem(title: "CI IMPROVEMENTS")
         navItem.rightBarButtonItem = addItem
         navigationBar.setItems([navItem], animated: false)
+    }
+    
+    @objc func AddImprovementView() {
+        let destVC = storyboard?.instantiateViewController(withIdentifier: "AddImprovementViewController") as! AddImprovementViewController
+        self.present(destVC, animated: true, completion: nil)
     }
     
     override var prefersStatusBarHidden: Bool {

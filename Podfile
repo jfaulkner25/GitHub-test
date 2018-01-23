@@ -6,5 +6,9 @@ target 'Pirelli' do
   use_frameworks!
 
   # Pods for Pirelli
+pod 'Firebase/Core'
+pod 'Firebase/Database'
+pod 'FirebaseUI'
+pod 'Firebase/Auth'
 
 end
